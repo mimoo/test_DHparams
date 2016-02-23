@@ -2,6 +2,8 @@
 
 In need of testing a Diffie-Hellman implementation? Not sure the parameters are correct?
 
+![test diffie hellman parameters](http://i.imgur.com/MIr0rKn.png)
+
 ## This test will check for
 
 * decent keysize (>=2048bits)
