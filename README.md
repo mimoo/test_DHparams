@@ -10,12 +10,22 @@ In need of testing a Diffie-Hellman implementation? Not sure the parameters are 
 
 ## How to run it?
 
-examples:
-
-* `echo "52104230423" | go run ./test_DHparams.go`
-
-* `cat socat_dh1024_p | go run ./test_DHparams.go`
+### Using OSX?
 
 If you are on OSX you can use directly `test_DHparams`:
 
 * `cat socat_dh1024_p | ./test_DHparams`
+
+### Else?
+
+1. get [golang](https://golang.org/)
+
+2. get dependencies:
+
+* `go get github.com/fatih/color`
+
+3. examples:
+
+* `echo "52104230423" | go run ./test_DHparams.go`
+
+* `cat socat_dh1024_p | go run ./test_DHparams.go`
