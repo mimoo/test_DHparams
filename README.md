@@ -6,7 +6,7 @@ In need of testing a Diffie-Hellman implementation? Not sure the parameters are 
 
 ## This test will check for
 
-* decent keysize (>=2048bits)
+* decent bitsize of the modulus (>=2048bits)
 
 * safe primes (modulus has to be of the form `2q + 1` with `q` prime)
 
