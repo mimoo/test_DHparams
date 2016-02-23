@@ -10,7 +10,6 @@ import(
 )
 
 func test_bitLength(modulus_int *big.Int) (int) {
-	fmt.Println(modulus_int.BitLen())
 	return modulus_int.BitLen()
 }
 
