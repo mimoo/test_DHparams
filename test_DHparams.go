@@ -9,9 +9,9 @@ import(
 	"github.com/fatih/color"
 )
 
-func test_bitLength(modulus_int big.Int) (bool) {
-
-	return true
+func test_bitLength(modulus_int *big.Int) (int) {
+	fmt.Println(modulus_int.BitLen())
+	return modulus_int.BitLen()
 }
 
 func test_safePrime(modulus_int *big.Int) (bool) {
@@ -33,15 +33,11 @@ func test_safePrime(modulus_int *big.Int) (bool) {
 	mod := new(big.Int)
 
 	if b0.Cmp(mod.Mod(q2, b2)) != 0 {
-		fmt.Println(mod == b0)
-		fmt.Println(mod.String(), b0)
 		return false
 	}
 
 	// q2 / 2 prime?
 	q2.Div(q2, b2)
-
-	fmt.Println("(p-1)/2", q2.String())
 
 	if q2.ProbablyPrime(500) {
 		return true
@@ -99,12 +95,20 @@ func main(){
 	//
 	fmt.Println("Taken input:", modulus_int.String())
 
-	//
+	// test for Bitlength
+	if bitlen := test_bitLength(modulus_int); bitlen >= 2048 {
+		color.Green("Good modulus bitlength!")
+		fmt.Println("(Mobulus is", bitlen, "bits)")
+	} else {
+		color.Red("Bad modulus bitlength! Should be at least 2048 bits")
+		fmt.Println("(Mobulus is", bitlen, "bits)")
+	}
+
 	// test for safe prime
-	//
 	if test_safePrime(modulus_int) {
 		color.Green("The modulus is a safe prime!")
 	} else {
 		color.Red("The modulus is NOT a safe prime!")
 	}
+	
 }
