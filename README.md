@@ -2,7 +2,7 @@
 
 In need of testing a Diffie-Hellman implementation? Not sure the parameters are correct?
 
-![test diffie hellman parameters](http://i.imgur.com/MIr0rKn.png)
+![test diffie hellman parameters](https://www.cryptologie.net/upload/Screen_Shot_2016-02-22_at_10.28_.42_PM_.png)
 
 ## This test will check for
 
