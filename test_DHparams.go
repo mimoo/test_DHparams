@@ -97,10 +97,10 @@ func main(){
 	// test for Bitlength
 	if bitlen := test_bitLength(modulus_int); bitlen >= 2048 {
 		color.Green("Good modulus bitlength!")
-		fmt.Println("(Mobulus is", bitlen, "bits)")
+		fmt.Println("(Modulus is", bitlen, "bits)")
 	} else {
 		color.Red("Bad modulus bitlength! Should be at least 2048 bits")
-		fmt.Println("(Mobulus is", bitlen, "bits)")
+		fmt.Println("(Modulus is", bitlen, "bits)")
 	}
 
 	// test for safe prime
